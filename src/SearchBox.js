@@ -1,7 +1,10 @@
 import React from 'react';
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
+import SearchBoxCSS from './SearchBox.css'
 
 const SearchBox = ({}) => (
-    <input placeholder="search" />
+    <input css={SearchBoxCSS} placeholder="search" />
 );
 
 
