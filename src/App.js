@@ -4,6 +4,7 @@ import { createStore, combineReducers  } from 'redux';
 import { Provider } from 'react-redux';
 
 import searchData from './reducer';
+import SearchContainer from "./SearchContainer";
 
 
 const allReducers = combineReducers({
@@ -20,18 +21,7 @@ class App extends Component {
     render() {
         return (
             <Provider store={store} >
-                <main>
-                    <input placeholder="search"/>
-                    <ul>
-                        <li>some data</li>
-                        <li>some data</li>
-                        <li>some data</li>
-                        <li>some data</li>
-                        <li>some data</li>
-                        <li>some data</li>
-                        <li>some data</li>
-                    </ul>
-                </main>
+                <SearchContainer/>
             </Provider>
         );
     }
