@@ -1,0 +1,1 @@
+export const SAVE_SEARCH_TEXT = "SAVE_SEARCH_TEXT";
