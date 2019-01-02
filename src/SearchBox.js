@@ -3,8 +3,12 @@ import React from 'react';
 import { css, jsx } from '@emotion/core'
 import SearchBoxCSS from './SearchBox.css'
 
-const SearchBox = ({}) => (
-    <input css={SearchBoxCSS} placeholder="search" />
+const SearchBox = ({value, onChangeHandler}) => (
+    <input css={SearchBoxCSS}
+           placeholder="search"
+           value={value}
+           onChange={onChangeHandler}
+    />
 );
 
 

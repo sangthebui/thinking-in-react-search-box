@@ -6,25 +6,17 @@ import { css, jsx } from '@emotion/core'
 import SuggestlistsCSS from './SuggestionLists.css';
 
 
-const SuggestionLists = ({}) => (
-    <ul css={SuggestlistsCSS}>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-        <li>some data</li>
-    </ul>
-);
+const SuggestionLists = ({suggestions = []}) => {
+
+    const suggestionsView = suggestions.map(eachSuggestion => (
+       <li>{eachSuggestion}</li>
+    ));
+
+    return (
+        <ul css={SuggestlistsCSS}>
+            {suggestionsView}
+        </ul>
+)};
 
 export default SuggestionLists;
 
